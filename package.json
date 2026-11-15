@@ -1,0 +1,81 @@
+{
+  "name": "kwtsms-convex",
+  "description": "Convex component to send SMS and OTP through kwtSMS, with message status, caps and test mode.",
+  "repository": "github:kwtsms/kwtsms-convex",
+  "homepage": "https://github.com/kwtsms/kwtsms-convex#readme",
+  "bugs": {
+    "url": "https://github.com/kwtsms/kwtsms-convex/issues"
+  },
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "kwtSMS (BoxLink Center)",
+  "keywords": [
+    "convex",
+    "component",
+    "kwtsms",
+    "sms",
+    "otp",
+    "kuwait"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc --project ./tsconfig.build.json",
+    "build:codegen": "npx convex codegen --component-dir ./src/component && npm run build",
+    "build:clean": "rm -rf dist *.tsbuildinfo && npm run build",
+    "typecheck": "tsc --noEmit && tsc -p example/convex",
+    "lint": "eslint .",
+    "test": "vitest run --typecheck",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/client/index.d.ts",
+      "default": "./dist/client/index.js"
+    },
+    "./test": "./src/test.ts",
+    "./_generated/component.js": {
+      "types": "./dist/component/_generated/component.d.ts"
+    },
+    "./_generated/component": {
+      "types": "./dist/component/_generated/component.d.ts"
+    },
+    "./convex.config.js": {
+      "types": "./dist/component/convex.config.d.ts",
+      "default": "./dist/component/convex.config.js"
+    },
+    "./convex.config": {
+      "types": "./dist/component/convex.config.d.ts",
+      "default": "./dist/component/convex.config.js"
+    }
+  },
+  "peerDependencies": {
+    "convex": "^1.50.0"
+  },
+  "dependencies": {
+    "@convex-dev/workpool": "^0.4.10"
+  },
+  "devDependencies": {
+    "@convex-dev/eslint-plugin": "^5.0.0",
+    "@edge-runtime/vm": "^5.0.0",
+    "@eslint/js": "9.39.5",
+    "@types/node": "^26.6.5",
+    "convex": "^1.50.0",
+    "convex-test": "0.0.61",
+    "eslint": "9.39.5",
+    "globals": "^17.9.0",
+    "prettier": "3.9.6",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript-eslint": "8.66.0",
+    "vitest": "4.1.11"
+  },
+  "types": "./dist/client/index.d.ts",
+  "module": "./dist/client/index.js"
+}
