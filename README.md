@@ -10,6 +10,8 @@
 
 A [Convex](https://convex.dev) component that sends SMS and OTP codes through kwtSMS, the Kuwaiti SMS gateway. Queued sending, message status, caps against abuse, English and Arabic OTP texts, and test mode by default.
 
+All kwtSMS integrations: [kwtsms.com/integrations](https://www.kwtsms.com/integrations/)
+
 ## About kwtSMS
 
 kwtSMS is a Kuwaiti SMS gateway trusted by top businesses to deliver messages anywhere in the world, with private Sender ID, free API testing, non-expiring credits, and competitive flat-rate pricing. Secure, simple to integrate, built to last. Open a free account in under 1 minute, no paperwork or payment required. [Click here to get started](https://www.kwtsms.com/cportal/signup/)
